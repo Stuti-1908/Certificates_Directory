@@ -1,0 +1,13 @@
+{
+  "name": "certificate-engine",
+  "version": "1.0.0",
+  "description": "Dynamic Certificate Engine - Batch certificate generator using Node-Canvas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "generate": "node index.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.58"
+  }
+}

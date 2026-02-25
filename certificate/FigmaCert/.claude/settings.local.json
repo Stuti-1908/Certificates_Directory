@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(powershell -Command:*)"
+    ]
+  }
+}

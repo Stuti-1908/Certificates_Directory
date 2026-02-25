@@ -1,0 +1,173 @@
+/* Modal Overlay - Dark background */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content */
+.modalContent {
+  position: relative;
+  width: 961px;
+  min-height: 310px;
+  background-color: #19191a;
+  border-radius: 20px;
+  box-shadow: 0px 22px 70px 4px rgba(0, 0, 0, 0.56);
+  padding: 49px 71px;
+  box-sizing: border-box;
+}
+
+/* Header with back button and title */
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.backButton {
+  width: 19px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.backButton:hover {
+  opacity: 0.7;
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Description */
+.modalDescription {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 24px 0;
+  line-height: 1;
+}
+
+.descriptionText {
+  color: #ababab;
+}
+
+.createEventLink {
+  color: #30dfa0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.createEventLink:hover {
+  opacity: 0.8;
+}
+
+/* Table Container */
+.tableContainer {
+  width: 100%;
+  max-height: 400px;
+  background-color: rgba(35, 40, 46, 0.27);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tableWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Table Header - Green background as per design */
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 43px;
+  height: 39px;
+  background-color: #006847;
+  border-radius: 10px 10px 0 0;
+  padding: 0 30px;
+}
+
+.headerCell {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.headerCellLast {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 107px;
+}
+
+/* Table Body */
+.tableBody {
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Table Row - Default state */
+.tableRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 43px;
+  height: 50px;
+  padding: 0 92px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+
+.tableRow:hover {
+  background-color: rgba(48, 223, 160, 0.1);
+}
+
+/* Table Row - Selected state with GREEN background */
+.tableRowSelected {
+  background-color: #002b1b !important;
+}
+
+.tableCell {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tableCellLast {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 107px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

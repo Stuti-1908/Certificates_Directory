@@ -1,0 +1,514 @@
+/* Dashboard Container */
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #19191a;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+}
+
+/* Sidebar structure mirrored from Certificate to guarantee consistency */
+.sidebarContainer {
+  position: relative;
+  width: 90px;
+  flex-shrink: 0;
+  z-index: 40;
+}
+
+.logo {
+  position: fixed;
+  top: 18px;
+  left: 14px;
+  width: 107px;
+  height: 63px;
+  object-fit: contain;
+  z-index: 50;
+}
+
+.sidebarBackground {
+  position: fixed;
+  top: 108px;
+  left: -2px;
+  width: 90px;
+  height: 643px;
+  background-color: #23282e;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 5px 4px 18.2px rgba(0, 0, 0, 0.25);
+  z-index: 40;
+}
+
+.sidebarIcons {
+  position: absolute;
+  top: 63px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+/* Regular sidebar icon - white */
+.sidebarIcon {
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: #fff;
+  font-size: 29px;
+}
+
+.sidebarIcon:hover {
+  opacity: 0.7;
+}
+
+/* Active sidebar icon - green */
+.sidebarIconActive {
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: #30dfa0;
+  font-size: 29px;
+}
+
+.sidebarIconActive:hover {
+  opacity: 0.8;
+}
+
+/* Gray sidebar icon - settings */
+.sidebarIconGray {
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: #6b7280;
+  font-size: 29px;
+}
+
+.sidebarIconGray:hover {
+  opacity: 0.7;
+}
+
+/* Logout icon - red/coral color */
+.sidebarIconLogout {
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: #e74c5e;
+  font-size: 29px;
+}
+
+.sidebarIconLogout:hover {
+  opacity: 0.7;
+}
+
+.sidebarIconMail {
+  width: 27px;
+  height: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: #fff;
+  font-size: 27px;
+}
+
+.sidebarIconMail:hover {
+  opacity: 0.7;
+}
+
+.sidebarDivider {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  width: 90px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Logout placement correction mapped to full visual width */
+.sidebarBottomIcons {
+  position: absolute;
+  bottom: 64px;
+  left: 20px;
+  /* Reduced to perfectly center the wrapper in the 90px div */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebarIconWrapper {
+  background-color: #23282e;
+  border-radius: 22px;
+  padding: 8px;
+  width: 45px;
+  height: 45px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 60px 40px 20px;
+  box-sizing: border-box;
+  margin-left: 27px;
+  /* Space from the 90px sidebar to match other layouts */
+}
+
+/* Header structured flexibly */
+.topHeader {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #23282e;
+  border-radius: 50px;
+  height: 48px;
+  width: 340px;
+  padding: 0 24px;
+  gap: 12px;
+}
+
+.searchIcon {
+  color: #fff;
+  font-size: 24px;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.languageSelector {
+  width: 48px;
+  height: 48px;
+  background-color: #23282e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translationIcon {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.settingsButton {
+  width: 48px;
+  height: 48px;
+  background-color: #23282e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingsIcon {
+  color: #fff;
+  font-size: 22px;
+}
+
+/* Page Title */
+.pageTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+}
+
+/* Panels Flex Layout System */
+.panelsGrid {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 40px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+}
+
+/* No Past Events Section */
+.pastEventsSection {
+  position: relative;
+  width: 100%;
+  height: 264px;
+}
+
+.sectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 150px;
+  background-color: #1d1e20;
+  width: 100%;
+  height: 100%;
+}
+
+/* No Ongoing Events Section */
+.ongoingEventsSection {
+  position: relative;
+  width: 100%;
+  height: 264px;
+}
+
+.sectionBackgroundTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 150px 20px 20px 20px;
+  background-color: #1d1e20;
+  width: 100%;
+  height: 100%;
+}
+
+/* Empty Section Content - Centered inside blob sections */
+.emptySectionContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.emptySectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+
+.emptySectionDescription {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Right Panel Stats Block */
+.statsSection {
+  position: relative;
+  flex: 1;
+  min-height: 559px;
+  border-radius: 20px 20px 150px 20px / 20px 20px 200px 20px;
+  overflow: hidden;
+}
+
+.statsSectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1d1e20;
+}
+
+/* Stats Cards - Side by side */
+.statsCards {
+  position: absolute;
+  top: 23px;
+  left: 26px;
+  right: 26px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.statCardCreated,
+.statCardLeft {
+  flex: 1;
+  height: 136px;
+  position: relative;
+}
+
+.statCardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #23282e;
+}
+
+.statCardHeaderBlue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  border-radius: 24px 24px 0 0;
+  background-color: #0ea0fb;
+}
+
+.statCardHeaderPurple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  border-radius: 24px 24px 0 0;
+  background-color: #9a73f0;
+}
+
+.statLabel {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.statNumber {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  font-size: 69px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Generate Certificate Section */
+.generateSectionOverlay {
+  position: absolute;
+  top: 188px;
+  left: 0;
+  width: 100%;
+  height: 144px;
+  background-color: #19191a;
+}
+
+.generateSection {
+  position: absolute;
+  top: 214px;
+  right: 26px;
+  text-align: right;
+}
+
+.generateTitle {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.generateDescription {
+  color: #30dfa0;
+  font-size: 14px;
+  margin: 4px 0 12px 0;
+}
+
+.createButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  height: 38px;
+  border: 1px solid #30dfa0;
+  border-radius: 30px;
+  background: transparent;
+  color: #30dfa0;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.createButton:hover {
+  background: #30dfa0;
+  color: #000;
+}
+
+/* Renew Pack Section */
+.renewPackSection {
+  position: absolute;
+  top: 353px;
+  left: 26px;
+  z-index: 2;
+}
+
+.renewPackTitle {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.renewPackDescription {
+  color: #30dfa0;
+  font-size: 14px;
+  margin: 7px 0 17px 0;
+}
+
+.renewButton {
+  width: 165px;
+  padding: 7px 10px;
+  background-color: #30dfa0;
+  color: #000;
+  border: none;
+  border-radius: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.renewButton:hover {
+  opacity: 0.9;
+}
+
+/* Artwork */
+.artwork {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Footer Element Flex Placed */
+.footer {
+  margin-top: auto;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  opacity: 0.5;
+}

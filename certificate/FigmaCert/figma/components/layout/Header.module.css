@@ -1,0 +1,103 @@
+.header {
+  height: 80px;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-left: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 80px;
+  z-index: 90;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: #3a3a3a;
+  border-radius: 25px;
+  padding: 0 20px;
+  width: 300px;
+  height: 45px;
+}
+
+.searchIcon {
+  margin-right: 12px;
+  opacity: 0.6;
+}
+
+.searchInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+  flex: 1;
+  font-family: inherit;
+}
+
+.searchInput::placeholder {
+  color: #888;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actionIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.actionIcon:hover {
+  background: #3a3a3a;
+}
+
+.settingsIcon {
+  width: 20px;
+  height: 20px;
+  background: #666;
+  border-radius: 50%;
+  position: relative;
+}
+
+.settingsIcon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 50%;
+}
+
+.notificationIcon {
+  width: 18px;
+  height: 20px;
+  background: #666;
+  border-radius: 4px 4px 8px 8px;
+  position: relative;
+}
+
+.notificationIcon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #ff4757;
+  border-radius: 50%;
+}

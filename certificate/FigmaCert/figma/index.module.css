@@ -1,0 +1,645 @@
+/* Dashboard Container */
+.dashboard {
+  width: 100%;
+  min-height: 810px;
+  position: relative;
+  background-color: #19191a;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header - Search Bar */
+.searchBar {
+  position: absolute;
+  top: 38px;
+  left: 948px;
+  border-radius: 71px;
+  background-color: #23282e;
+  width: 311px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  gap: 12px;
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Settings Button */
+.settingsButton {
+  position: absolute;
+  top: 37px;
+  left: 1333px;
+  width: 45px;
+  height: 45px;
+  border-radius: 22px;
+  background-color: #23282e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingsIcon {
+  width: 18px;
+  height: 20px;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 18px;
+  left: 14px;
+  width: 107px;
+  height: 63px;
+  object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar {
+  position: absolute;
+  top: 108px;
+  left: -2px;
+  width: 90px;
+  height: 643px;
+}
+
+.sidebarBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  background-color: #23282e;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 5px 4px 18.2px rgba(0, 0, 0, 0.25);
+}
+
+.sidebarIcons {
+  position: absolute;
+  top: 63px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.sidebarIcon {
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.sidebarIcon:hover {
+  opacity: 0.7;
+}
+
+.sidebarIconMail {
+  width: 27px;
+  height: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.sidebarIconMail:hover {
+  opacity: 0.7;
+}
+
+.sidebarDivider {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  width: 90px;
+}
+
+.sidebarBottomIcons {
+  position: absolute;
+  bottom: 64px;
+  left: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebarIconWrapper {
+  background-color: #23282e;
+  border-radius: 22px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  top: 785px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  width: 471px;
+}
+
+/* Page Title */
+.pageTitle {
+  position: absolute;
+  top: 91px;
+  left: 139px;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Past Certificates Section */
+.pastCertificatesSection {
+  position: absolute;
+  top: 164px;
+  left: 117px;
+  width: 624px;
+  height: 264px;
+}
+
+.sectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 150px;
+  background-color: #1d1e20;
+  width: 624px;
+  height: 264px;
+}
+
+.sectionHeader {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.viewAllLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  color: #30dfa0;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.viewAllLink:hover {
+  opacity: 1;
+}
+
+.viewAllText {
+  white-space: nowrap;
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.arrowIconRotated {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg);
+}
+
+.certificateList {
+  position: absolute;
+  top: 58px;
+  left: 14px;
+  width: 595px;
+  height: 189px;
+  overflow: hidden;
+  border-bottom-left-radius: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificateRow {
+  background-color: #19191a;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 30px;
+  height: 31px;
+}
+
+.certificateRowAlt {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  gap: 30px;
+  height: 31px;
+}
+
+.eventAvatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.eventName {
+  font-size: 14px;
+  width: 130px;
+}
+
+.sportName {
+  font-size: 14px;
+  width: 90px;
+}
+
+.eventDate {
+  font-size: 14px;
+  width: 50px;
+}
+
+.viewDetailsLink {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #30dfa0;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.viewDetailsLink:hover {
+  opacity: 1;
+}
+
+.viewDetailsText {
+  white-space: nowrap;
+}
+
+/* Upcoming Tournaments Section */
+.upcomingSection {
+  position: absolute;
+  top: 459px;
+  left: 117px;
+  width: 624px;
+  height: 264px;
+}
+
+.upcomingSectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 150px 20px 20px 20px;
+  background-color: #1d1e20;
+  width: 624px;
+  height: 264px;
+}
+
+.liveUpdatesBadge {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  border-radius: 8px;
+  border: 1px solid #30dfa0;
+  padding: 5px 10px;
+  color: #30dfa0;
+  font-size: 14px;
+}
+
+.badgeText {
+}
+
+.upcomingTitle {
+  position: absolute;
+  top: 32px;
+  left: 92px;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tournamentDetails {
+  position: absolute;
+  top: 82px;
+  left: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tournamentName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tournamentLocation,
+.tournamentStats,
+.tournamentMeta {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.viewAllEventsLink {
+  position: absolute;
+  top: 180px;
+  left: 92px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #30dfa0;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.viewAllEventsLink:hover {
+  opacity: 1;
+}
+
+.tabsContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  font-size: 12px;
+}
+
+.tabFirst {
+  background-color: #30dfa0;
+  color: #23282e;
+  padding: 8px 55px;
+  border-bottom-left-radius: 20px;
+  font-weight: 500;
+}
+
+.tabTextActive {
+}
+
+.tabSecond {
+  padding: 8px 45px;
+  opacity: 0.5;
+}
+
+.tabTextInactive {
+}
+
+.tabThird {
+  background-color: #e30b5c;
+  padding: 8px 52px;
+  opacity: 0.5;
+}
+
+.tabFourth {
+  background-color: #1a51f4;
+  padding: 8px 48px;
+  opacity: 0.5;
+}
+
+/* Stats and Actions Section */
+.statsSection {
+  position: absolute;
+  top: 164px;
+  left: 763px;
+  width: 615px;
+  height: 559px;
+  border-radius: 20px 20px 150px 20px / 20px 20px 200px 20px;
+  overflow: hidden;
+}
+
+.statsSectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 615px;
+  height: 559px;
+  border-radius: 20px 20px 150px 20px / 20px 20px 200px 20px;
+  background-color: #1d1e20;
+}
+
+/* Stats Cards */
+.statsCards {
+  position: absolute;
+  top: 23px;
+  left: 26px;
+  display: flex;
+  gap: 20px;
+}
+
+.statCardCreated,
+.statCardLeft {
+  width: 272px;
+  height: 136px;
+  position: relative;
+}
+
+.statCardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #23282e;
+}
+
+.statCardHeaderBlue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  border-radius: 24px 24px 0 0;
+  background-color: #0ea0fb;
+}
+
+.statCardHeaderPurple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  border-radius: 24px 24px 0 0;
+  background-color: #9a73f0;
+}
+
+.statLabel {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.statNumber {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  font-size: 69px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Generate Certificate Section */
+.generateSectionOverlay {
+  position: absolute;
+  top: 188px;
+  left: 0;
+  width: 615px;
+  height: 144px;
+  background-color: #19191a;
+}
+
+.generateSection {
+  position: absolute;
+  top: 214px;
+  right: 26px;
+  text-align: right;
+}
+
+.generateTitle {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.generateDescription {
+  color: #30dfa0;
+  font-size: 14px;
+  margin: 4px 0 12px 0;
+}
+
+.createButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  height: 38px;
+  border: 1px solid #30dfa0;
+  border-radius: 30px;
+  background: transparent;
+  color: #30dfa0;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.createButton:hover {
+  background: #30dfa0;
+  color: #000;
+}
+
+/* Renew Pack Section */
+.renewPackSection {
+  position: absolute;
+  top: 353px;
+  left: 26px;
+  z-index: 2;
+}
+
+.renewPackTitle {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.renewPackDescription {
+  color: #30dfa0;
+  font-size: 14px;
+  margin: 7px 0 17px 0;
+}
+
+.renewButton {
+  width: 165px;
+  padding: 7px 10px;
+  background-color: #30dfa0;
+  color: #000;
+  border: none;
+  border-radius: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.renewButton:hover {
+  opacity: 0.9;
+}
+
+/* Artwork */
+.artwork {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 550px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Language Selector */
+.languageSelector {
+  position: absolute;
+  top: 34px;
+  left: 1272px;
+  width: 51px;
+  height: 51px;
+}
+
+.languageBackground {
+  position: absolute;
+  top: 3px;
+  left: 2.5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 22px;
+  background-color: #23282e;
+}
+
+.translationIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51px;
+  height: 51px;
+  object-fit: cover;
+}

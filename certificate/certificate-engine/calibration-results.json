@@ -1,0 +1,26 @@
+{
+  "gold-certificate.jpeg": {
+    "template": "gold-certificate.jpeg",
+    "width": 1080,
+    "height": 1920,
+    "placeholders": []
+  },
+  "silver-certificate.jpeg": {
+    "template": "silver-certificate.jpeg",
+    "width": 1080,
+    "height": 1920,
+    "placeholders": []
+  },
+  "bronze-certificate.jpeg": {
+    "template": "bronze-certificate.jpeg",
+    "width": 1080,
+    "height": 1920,
+    "placeholders": []
+  },
+  "participation-certificate.jpeg": {
+    "template": "participation-certificate.jpeg",
+    "width": 1080,
+    "height": 1920,
+    "placeholders": []
+  }
+}
