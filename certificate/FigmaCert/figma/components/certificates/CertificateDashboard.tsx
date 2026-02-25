@@ -6,12 +6,12 @@ import styles from './CertificateDashboard.module.css';
 
 // Fresh assets from Figma MCP (expires in 7 days) - Logo and event avatars
 const imgSportsKeyzWhite1 = "/SportsKeyz White 1.png";
-const imgRectangle687 = "https://www.figma.com/api/mcp/asset/8d517839-eddd-4605-8496-aeeb6647497c";
-const imgRectangle688 = "https://www.figma.com/api/mcp/asset/93bc24fd-442f-4f17-a1e7-cd4a2e55f047";
-const imgRectangle689 = "https://www.figma.com/api/mcp/asset/eec558e8-4985-4fd6-8f48-14c2a551a75b";
-const imgRectangle690 = "https://www.figma.com/api/mcp/asset/94424c0c-6891-4181-a096-a5025dea6fcf";
-const imgRectangle691 = "https://www.figma.com/api/mcp/asset/8c27b6a5-5db2-47d6-a1eb-c3c0b432eb7e";
-const imgRectangle692 = "https://www.figma.com/api/mcp/asset/68cf52b9-12d6-47c4-a540-9f8ccf5ecd19";
+const imgRectangle687 = "/profile images/Rectangle 687.png";
+const imgRectangle688 = "/profile images/Rectangle 687 (1).png";
+const imgRectangle689 = "/profile images/Rectangle 687 (2).png";
+const imgRectangle690 = "/profile images/Rectangle 687 (3).png";
+const imgRectangle691 = "/profile images/Rectangle 687 (4).png";
+const imgRectangle692 = "/profile images/Rectangle 687 (5).png";
 
 const eventAvatars = [imgRectangle687, imgRectangle688, imgRectangle689, imgRectangle690, imgRectangle691, imgRectangle692];
 
@@ -92,13 +92,13 @@ const CertificateDashboard: NextPage<CertificateDashboardProps> = ({
               <div className={styles.certificateList}>
                 {eventAvatars.map((avatar, idx) => (
                   <div key={idx} className={idx % 2 === 0 ? styles.certificateRow : styles.certificateRowAlt}>
-                    <img src={avatar} alt="" className={styles.eventAvatar} />
+                    <img src={avatar} alt="Event Avatar" className={styles.eventAvatar} />
                     <span className={styles.eventName}>Name of the event</span>
                     <span className={styles.sportName}>Sport Name</span>
                     <span className={styles.eventDate}>Date</span>
                     <div className={styles.viewDetailsLink}>
                       <span className={styles.viewDetailsText}>View Details</span>
-                      <MdKeyboardArrowDown className={styles.arrowIconRotated} />
+                      <MdKeyboardArrowDown className={styles.arrowIconRotatedDetails} />
                     </div>
                   </div>
                 ))}
