@@ -1,10 +1,11 @@
 /* Dashboard Container */
 .dashboard {
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   min-height: 810px;
   position: relative;
   background-color: #19191a;
-  overflow: hidden;
   text-align: left;
   font-size: 14px;
   color: #fff;
@@ -340,8 +341,7 @@
   font-size: 14px;
 }
 
-.badgeText {
-}
+.badgeText {}
 
 .upcomingTitle {
   position: absolute;
@@ -407,16 +407,14 @@
   font-weight: 500;
 }
 
-.tabTextActive {
-}
+.tabTextActive {}
 
 .tabSecond {
   padding: 8px 45px;
   opacity: 0.5;
 }
 
-.tabTextInactive {
-}
+.tabTextInactive {}
 
 .tabThird {
   background-color: #e30b5c;
