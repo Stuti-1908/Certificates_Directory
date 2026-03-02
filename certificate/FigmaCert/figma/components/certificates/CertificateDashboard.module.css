@@ -368,6 +368,7 @@
   padding: 0 40px;
   min-height: 48px;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .certificateRowAlt {
@@ -377,6 +378,7 @@
   padding: 0 40px;
   min-height: 48px;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .eventAvatar {
@@ -413,6 +415,7 @@
 
 .viewDetailsLink {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 4px;
   color: #30dfa0;
@@ -421,6 +424,7 @@
   opacity: 0.9;
   transition: opacity 0.2s;
   flex-shrink: 0;
+  min-width: 130px;
 }
 
 .viewDetailsLink:hover {

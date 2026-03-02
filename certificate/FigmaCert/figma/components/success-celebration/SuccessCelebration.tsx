@@ -22,15 +22,16 @@ interface SuccessCelebrationProps {
   autoCloseDelay?: number;
 }
 
-const SuccessCelebration: React.FC<SuccessCelebrationProps> = ({ 
+const SuccessCelebration: React.FC<SuccessCelebrationProps> = ({
   isOpen,
   onClose,
-  certificateCode = '77A1293B84F213C5',
-  eventName = '31st Karnataka State Archery Championship',
-  registeredCount = 1200,
-  nonRegisteredCount = 1340,
+  certificateCode,
+  eventName = 'Certificate Generation',
+  registeredCount = 0,
+  nonRegisteredCount = 0,
   autoCloseDelay = 5000
 }) => {
+  const displayCode = certificateCode || Date.now().toString(16).toUpperCase();
   const [confetti, setConfetti] = useState<ConfettiPiece[]>([]);
 
   useEffect(() => {
@@ -51,7 +52,7 @@ const SuccessCelebration: React.FC<SuccessCelebrationProps> = ({
     ];
 
     const pieces: ConfettiPiece[] = [];
-    
+
     // Create confetti pieces around the checkmark area
     for (let i = 0; i < 40; i++) {
       pieces.push({
@@ -64,7 +65,7 @@ const SuccessCelebration: React.FC<SuccessCelebrationProps> = ({
         rotation: Math.random() * 360,
       });
     }
-    
+
     setConfetti(pieces);
 
     // Auto close after delay
@@ -156,7 +157,7 @@ const SuccessCelebration: React.FC<SuccessCelebrationProps> = ({
           <div className={styles.confettiContainer}>
             {confetti.map(renderConfettiPiece)}
           </div>
-          
+
           {/* Checkmark Circle */}
           <div className={styles.checkmarkCircle}>
             <IoCheckmark className={styles.checkmarkIcon} />
@@ -164,14 +165,14 @@ const SuccessCelebration: React.FC<SuccessCelebrationProps> = ({
         </div>
 
         {/* Certificate Code */}
-        <div className={styles.certificateCode}>{certificateCode}</div>
-        
+        <div className={styles.certificateCode}>{displayCode}</div>
+
         {/* Event Name */}
         <div className={styles.eventName}>{eventName}</div>
-        
+
         {/* Success Message */}
         <div className={styles.successMessage}>All certificates issued successfully!</div>
-        
+
         {/* Stats */}
         <div className={styles.statsContainer}>
           <div className={styles.statLine}>
